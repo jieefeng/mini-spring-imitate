@@ -11,10 +11,7 @@ import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author derekyi
- * @date 2020/12/5
- */
+
 public class AspectJExpressionPointcut implements Pointcut, ClassFilter, MethodMatcher {
 
 	private static final Set<PointcutPrimitive> SUPPORTED_PRIMITIVES = new HashSet<PointcutPrimitive>();
