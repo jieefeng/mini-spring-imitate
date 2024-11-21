@@ -1,4 +1,4 @@
-package org.springframework.service;
+package org.springframework.aop.aspectj;
 
 import org.aspectj.weaver.tools.PointcutExpression;
 import org.aspectj.weaver.tools.PointcutParser;
@@ -11,10 +11,6 @@ import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author derekyi
- * @date 2020/12/5
- */
 public class AspectJExpressionPointcut implements Pointcut, ClassFilter, MethodMatcher {
 
 	private static final Set<PointcutPrimitive> SUPPORTED_PRIMITIVES = new HashSet<PointcutPrimitive>();
