@@ -8,10 +8,7 @@ import org.springframework.test.service.HelloService;
 import java.lang.reflect.Method;
 
 import static org.assertj.core.api.Assertions.assertThat;
-/**
- * @author derekyi
- * @date 2020/12/5
- */
+
 public class PointcutExpressionTest {
 
 	@Test
