@@ -1,4 +1,4 @@
-package org.springframework.service;
+package org.springframework.aop.aspectj;
 
 import org.aspectj.weaver.tools.PointcutExpression;
 import org.aspectj.weaver.tools.PointcutParser;
