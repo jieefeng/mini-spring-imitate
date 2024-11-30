@@ -2,8 +2,11 @@ package org.springframework.aop;
 
 import org.aopalliance.intercept.MethodInterceptor;
 
+//相当与包装了代理需要的元素
 public class AdvisedSupport {
 
+	//是否使用cglib代理
+	private boolean proxyTargetClass = false;
 	private TargetSource targetSource;
 
 	private MethodInterceptor methodInterceptor;
@@ -12,6 +15,13 @@ public class AdvisedSupport {
 
 	public TargetSource getTargetSource() {
 		return targetSource;
+	}
+	public boolean isProxyTargetClass() {
+		return proxyTargetClass;
+	}
+
+	public void setProxyTargetClass(boolean proxyTargetClass) {
+		this.proxyTargetClass = proxyTargetClass;
 	}
 
 	public void setTargetSource(TargetSource targetSource) {
