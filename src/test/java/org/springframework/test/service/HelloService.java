@@ -1,6 +1,5 @@
 package org.springframework.test.service;
 
-
 public class HelloService {
 //		implements ApplicationContextAware, BeanFactoryAware {
 
