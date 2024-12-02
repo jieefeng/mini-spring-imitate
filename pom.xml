@@ -8,6 +8,8 @@
     <artifactId>mini-spring-imitate</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <url>https://github.com/DerekYRC/mini-spring</url>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
