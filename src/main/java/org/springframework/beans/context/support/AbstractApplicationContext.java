@@ -4,6 +4,7 @@ package org.springframework.beans.context.support;
 
 
 import org.springframework.beans.BeansException;
+import org.springframework.beans.context.aware.ApplicationContextAwareProcessor;
 import org.springframework.beans.factory.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -26,6 +27,10 @@ public abstract class AbstractApplicationContext extends
 		//创建BeanFactory，并加载BeanDefinition
 		refreshBeanFactory();
 		ConfigurableListableBeanFactory beanFactory = getBeanFactory();
+
+		//添加ApplicationContextAwareProcessor，让继承自ApplicationContextAware的bean能感知bean
+		beanFactory.addBeanPostProcessor(new ApplicationContextAwareProcessor(this));
+
 
 		//在bean实例化之前，执行BeanFactoryPostProcessor
 		invokeBeanFactoryPostProcessors(beanFactory);
