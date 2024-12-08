@@ -10,7 +10,8 @@ import org.springframework.beans.factory.config.BeanReference;
 
 import java.lang.reflect.Method;
 
-public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory implements AutowireCapableBeanFactory {
+public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory
+		implements AutowireCapableBeanFactory {
 
 	private InstantiationStrategy instantiationStrategy = new SimpleInstantiationStrategy();
 
@@ -34,6 +35,10 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 
 		addSingleton(beanName, bean);
 		return bean;
+	}
+
+	public <T> T getBean(String name, Class<T> requiredType) throws BeansException {
+		return ((T) getBean(name));
 	}
 
 	protected Object createBeanInstance(BeanDefinition beanDefinition) {

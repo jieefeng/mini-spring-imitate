@@ -14,7 +14,8 @@ import java.util.List;
  * @author derekyi
  * @date 2020/11/22
  */
-public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements BeanFactory , ConfigurableBeanFactory {
+public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry
+		implements ConfigurableBeanFactory {
 
 	private final List<BeanPostProcessor> beanPostProcessors = new ArrayList<>();
 	@Override
@@ -27,6 +28,12 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
 		BeanDefinition beanDefinition = getBeanDefinition(name);
 		return createBean(name, beanDefinition);
 	}
+
+	@Override
+	public <T> T getBean(String name, Class<T> requiredType) throws BeansException {
+		return ((T) getBean(name));
+	}
+
 
 	public void addBeanPostProcessor(BeanPostProcessor beanPostProcessor) {
 		//有则覆盖
