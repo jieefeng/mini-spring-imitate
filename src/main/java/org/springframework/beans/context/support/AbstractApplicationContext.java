@@ -87,5 +87,27 @@ public abstract class AbstractApplicationContext extends
 	}
 
 	public abstract ConfigurableListableBeanFactory getBeanFactory();
+
+	public void close() {
+		doClose();
+	}
+
+	public void registerShutdownHook() {
+		Thread shutdownHook = new Thread() {
+			public void run() {
+				doClose();
+			}
+		};
+		Runtime.getRuntime().addShutdownHook(shutdownHook);
+
+	}
+
+	protected void doClose() {
+		destroyBeans();
+	}
+
+	protected void destroyBeans() {
+		getBeanFactory().destroySingletons();
+	}
 }
 
