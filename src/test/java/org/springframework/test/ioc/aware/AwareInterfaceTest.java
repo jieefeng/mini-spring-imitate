@@ -1,7 +1,7 @@
 package org.springframework.test.ioc.aware;
 
 import org.junit.Test;
-import org.springframework.beans.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.ioc.service.HelloService;
 
 import static org.assertj.core.api.Assertions.assertThat;

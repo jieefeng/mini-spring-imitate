@@ -1,7 +1,7 @@
 package org.springframework.test.ioc;
 
 import org.junit.Test;
-import org.springframework.beans.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @author derekyi

@@ -1,7 +1,7 @@
-package org.springframework.beans.context.aware;
+package org.springframework.context.aware;
 
 import org.springframework.beans.BeansException;
-import org.springframework.beans.context.ApplicationContext;
+import org.springframework.context.ApplicationContext;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
 

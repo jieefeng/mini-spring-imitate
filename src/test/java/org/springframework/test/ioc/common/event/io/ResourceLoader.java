@@ -1,0 +1,14 @@
+package org.springframework.test.ioc.common.event.io;
+
+import org.springframework.core.io.Resource;
+
+/**
+ * 资源加载器接口
+ *
+ * @author derekyi
+ * @date 2020/11/25
+ */
+public interface ResourceLoader {
+
+	Resource getResource(String location);
+}

@@ -1,8 +1,8 @@
 package org.springframework.test.ioc.service;
 
 import org.springframework.beans.BeansException;
-import org.springframework.beans.context.ApplicationContext;
-import org.springframework.beans.context.aware.ApplicationContextAware;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.aware.ApplicationContextAware;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.aware.BeanFactoryAware;
 
